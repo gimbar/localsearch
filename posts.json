@@ -1,0 +1,4 @@
+{"posts":[
+  {"relativeUrl":"foo", "title":"foobar", "content":"toller Artikel"},
+  {"relativeUrl":"bar", "title":"barbaz", "content":"nicht so toller Artikel"}
+]}
