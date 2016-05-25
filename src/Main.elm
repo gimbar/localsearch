@@ -82,5 +82,16 @@ view model =
         SearchModel searchModel ->
             Html.div []
                 [ Html.input [ Attributes.placeholder "search", Events.onInput UpdateSearchTerm ] []
-                , Html.div [] [Html.text (toString (List.length searchModel.searchResult))]
+                , renderSearchResult searchModel.searchResult
                 ]
+
+renderSearchResult : (List Post) -> Html.Html Msg
+renderSearchResult posts =
+    Html.div [ Attributes.class "searchResults" ] ( List.map renderPost posts )
+
+renderPost : Post -> Html.Html Msg
+renderPost post =
+    Html.div [ Attributes.class "searchResult" ]
+        [ Html.h3 [Attributes.href post.relativeUrl] [Html.text post.title]
+        , Html.text post.content
+        ]
