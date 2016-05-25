@@ -2,5 +2,6 @@
 elm-package.json
 elm-stuff/
 node_modules/
+index.html
 # elm-repl generated files
 repl-temp-*
